@@ -79,7 +79,7 @@ export default function Home() {
   const [animateSpeed, setAnimateSpeed] = useState(1);
   const [animateReverse, setAnimateReverse] = useState(false);
   const [lightSettings, setLightSettings] = useState<LightSettings>(defaultLightSettings);
-  const [currentText, setCurrentText] = useState("3DSVG");
+  const [currentText, setCurrentText] = useState("Vector Index");
   const [currentFont, setCurrentFont] = useState("Rubik Mono One");
   const [embedOpen, setEmbedOpen] = useState(false);
   const [downloadOpen, setDownloadOpen] = useState(false);
