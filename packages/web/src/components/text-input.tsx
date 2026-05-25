@@ -24,6 +24,8 @@ const FONTS = [
   { name: "Pacifico", url: "https://fonts.gstatic.com/s/pacifico/v23/FwZY7-Qmy14u9lezJ96A.ttf" },
   { name: "Oswald", url: "https://fonts.gstatic.com/s/oswald/v57/TK3_WkUHHAIjg75cFRf3bXL8LICs1xZogUE.ttf" },
   { name: "Archivo Black", url: "https://fonts.gstatic.com/s/archivoblack/v23/HTxqL289NzCGg4MzN6KJ7eW6OYs.ttf" },
+  { name: "ZCOOL QingKe HuangYou", url: "https://cdn.jsdelivr.net/gh/googlefonts/zcool-qingke-huangyou@main/fonts/ZCOOLQingKeHuangYou-Regular.ttf" },
+  { name: "Ma Shan Zheng", url: "https://cdn.jsdelivr.net/gh/googlefonts/mashanzheng@master/fonts/ttf/MaShanZheng-Regular.ttf" },
 ];
 
 const fontCache = new Map<string, opentype.Font>();
