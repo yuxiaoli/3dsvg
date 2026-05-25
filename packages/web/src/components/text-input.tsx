@@ -26,7 +26,7 @@ const FONTS = [
   { name: "Archivo Black", url: "https://fonts.gstatic.com/s/archivoblack/v23/HTxqL289NzCGg4MzN6KJ7eW6OYs.ttf" },
   { name: "ZCOOL QingKe HuangYou", url: "https://cdn.jsdelivr.net/gh/googlefonts/zcool-qingke-huangyou@main/fonts/ZCOOLQingKeHuangYou-Regular.ttf" },
   { name: "Ma Shan Zheng", url: "https://cdn.jsdelivr.net/gh/googlefonts/mashanzheng@master/fonts/ttf/MaShanZheng-Regular.ttf" },
-  { name: "Noto Sans SC", url: "https://fonts.gstatic.com/s/notosanssc/v40/k3kCo84MPvpLmixcA63oeAL7Iqp5IZJF9bmaG9_FrYtHaN7R9HA.ttf" },
+  { name: "Noto Sans SC", url: "https://cdn.jsdelivr.net/gh/notofonts/noto-cjk@main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf" },
 ];
 
 const fontCache = new Map<string, opentype.Font>();
