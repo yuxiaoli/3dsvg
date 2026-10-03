@@ -47,6 +47,25 @@ jobs:
       - name: Build with Next.js
         run: npm run build
 
+      - name: Install browser for the Pages smoke test
+        run: npx playwright install --with-deps chromium
+
+      - name: Verify 3D editor before publishing
+        timeout-minutes: 5
+        run: |
+          mkdir -p .pages-preview
+          ln -s ../packages/web/out .pages-preview/3dsvg
+          npm run test:pages
+
+      - name: Upload browser test evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pages-browser-smoke
+          path: test-results/
+          retention-days: 7
+          if-no-files-found: ignore
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -62,3 +81,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+

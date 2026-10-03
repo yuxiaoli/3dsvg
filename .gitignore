@@ -46,3 +46,9 @@ packages/web/.next/
 packages/engine/dist/
 
 packages/web/out/
+
+# Pages browser smoke tests
+/.pages-preview/
+/test-results/
+/playwright-report/
+

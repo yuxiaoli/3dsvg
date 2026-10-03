@@ -8,9 +8,13 @@
     "dev:engine": "npm --workspace=packages/engine run dev",
     "dev:web": "npm --workspace=packages/web run dev",
     "build": "npm --workspace=packages/engine run build && npm --workspace=packages/web run build",
-    "build:engine": "npm --workspace=packages/engine run build"
+    "build:engine": "npm --workspace=packages/engine run build",
+    "test:pages": "playwright test --config playwright.pages.config.mjs"
   },
   "engines": {
     "node": ">=18"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0"
   }
 }
