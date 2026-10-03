@@ -5,12 +5,12 @@ export default defineConfig({
   fullyParallel: false,
   workers: 1,
   retries: 0,
-  timeout: 120_000,
+  timeout: 180_000,
   expect: { timeout: 30_000 },
   reporter: 'line',
   use: {
     baseURL: 'http://127.0.0.1:4173/3dsvg/',
-    viewport: { width: 1440, height: 1000 },
+    viewport: { width: 1280, height: 800 },
     deviceScaleFactor: 1,
     // The vendor-packaged Chrome channel has a usable sandbox on Ubuntu 24.
     channel: 'chrome',

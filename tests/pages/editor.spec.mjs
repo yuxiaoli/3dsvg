@@ -114,7 +114,10 @@ test('built-in SVG renders, extrudes and rotates on the Pages export', async ({ 
   await page.mouse.up();
   await expect.poll(async () => changedPixels(extruded, await readFrame(canvas)),
     { message: 'Dragging the canvas must rotate the rendered object' }).toBeGreaterThan(50);
-  const rotated = await stableFrame(canvas);
+  // Drag momentum intentionally continues after release. The settled pre-drag
+  // frame plus disabled animation isolates this visible change to rotation;
+  // waiting for inertia to stop would depend on the software renderer's FPS.
+  const rotated = await readFrame(canvas);
   expect(changedPixels(extruded, rotated)).toBeGreaterThan(50);
   await page.screenshot({ path: testInfo.outputPath('extruded-and-rotated.png') });
 
