@@ -12,10 +12,13 @@ export default defineConfig({
     baseURL: 'http://127.0.0.1:4173/3dsvg/',
     viewport: { width: 1440, height: 1000 },
     deviceScaleFactor: 1,
+    // The vendor-packaged Chrome channel has a usable sandbox on Ubuntu 24.
+    channel: 'chrome',
     screenshot: 'only-on-failure',
     trace: 'retain-on-failure',
     launchOptions: {
       chromiumSandbox: true,
+      ignoreDefaultArgs: ['--enable-unsafe-swiftshader', '--unsafely-disable-devtools-self-xss-warnings'],
       // Use ANGLE's software driver in GPU-less CI, keeping the sandbox on.
       // Do not enable unsafe WebGL fallback or disable browser security.
       args: ['--use-gl=angle', '--use-angle=swiftshader'],

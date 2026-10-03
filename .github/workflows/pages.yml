@@ -48,7 +48,7 @@ jobs:
         run: npm run build
 
       - name: Install browser for the Pages smoke test
-        run: npx playwright install --with-deps chromium
+        run: npx playwright install --with-deps chrome
 
       - name: Verify 3D editor before publishing
         timeout-minutes: 5
